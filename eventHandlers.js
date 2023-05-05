@@ -127,7 +127,7 @@ export const handleSettingsSave = (event) => {
  * be filtered by. This event handler is also used to create the options in both
  * the author and genre selectors
  */
-export const createPreviewsOverlayToggle = () => {
+export const createSearchOverlay = () => {
     // Variable used to store the overlay and used to toggle it's open attribute
     const searchOverlay = document.querySelector('[data-search-overlay]')
     searchOverlay.toggleAttribute('open')

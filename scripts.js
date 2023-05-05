@@ -1,5 +1,5 @@
 import {books, BOOKS_PER_PAGE,authors} from './data.js'
-import { handlePreviewClick, handlePreviewToggle, handleClickAversion, handleSettingsOverlayToggle, handleSettingsSave, createPreviewsOverlayToggle} from './eventHandlers.js'
+import { handlePreviewClick, handlePreviewToggle, handleClickAversion, handleSettingsOverlayToggle, handleSettingsSave, createSearchOverlay} from './eventHandlers.js'
 /**
  * Holds the lenght of books (imported form data.js). 
  * Books serves as the data for this website
@@ -230,9 +230,9 @@ const settingsOverlayButton = document.querySelector('[data-header-settings]')
 settingsOverlayButton.addEventListener('click', handleSettingsOverlayToggle)
 
 const searchOverlayCancelButton = document.querySelector('[data-search-cancel]')
-searchOverlayCancelButton.addEventListener('click', createPreviewsOverlayToggle)
+searchOverlayCancelButton.addEventListener('click', createSearchOverlay)
 
 const headerSearch = document.querySelector('[data-header-search]') 
-headerSearch.addEventListener('click', createPreviewsOverlayToggle)
+headerSearch.addEventListener('click', createSearchOverlay)
 headerSearch.click()
 searchButton.click()
